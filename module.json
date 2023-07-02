@@ -1,0 +1,11 @@
+{
+    "name": "Universal",
+    "alias": "universal",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Services\\Universal\\Providers\\UniversalServiceProvider"
+    ],
+    "files": []
+}
