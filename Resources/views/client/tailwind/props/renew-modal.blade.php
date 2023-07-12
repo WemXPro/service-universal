@@ -48,7 +48,7 @@ Renew
                     <label for="default" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Renew for</label>
                     <select id="default" name="frequency" class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                       @foreach (range(1, 12) as $value)
-                        <option value="{{ $value }}" @if($value == 1) selected @endif>{{ $value }} {{ ucfirst($order->period()) }} - ${{ number_format($value * $order->price['renewal_price'], 2)}}</option>
+                        <option value="{{ $value }}" @if($value == 1) selected @endif>{{ $value }} {{ ucfirst($order->period()) }} - {{ currency('symbol') }}{{ number_format($value * $order->price['renewal_price'], 2)}}</option>
                       @endforeach
                     </select>
             </div>

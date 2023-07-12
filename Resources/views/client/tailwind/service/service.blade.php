@@ -17,7 +17,7 @@
                     <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col justify-between">
                         <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Billing cycle</h6>
                         <div class="flex items-center text-gray-500 dark:text-gray-400">
-                            <span class="text-gray-500 dark:text-white font-bold mr-1"> ${{ number_format($order->price['renewal_price'], 2) }}</span> /
+                            <span class="text-gray-500 dark:text-white font-bold mr-1"> {{ currency('symbol') }}{{ number_format($order->price['renewal_price'], 2) }}</span> /
                             {{ $order->period() }}
                         </div>
                     </div>

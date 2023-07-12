@@ -3,7 +3,7 @@
 return [
 
     'name' => 'Universal Module',
-    'icon' => '',
+    'icon' => 'https://imgur.png',
     'author' => 'WemX',
     'version' => '1.0.0',
     'wemx_version' => '1.0.0',
