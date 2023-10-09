@@ -38,7 +38,7 @@ Renew
             <!-- Modal body -->
             <div class="p-6 space-y-6">
                 <div class="mb-4 text-sm text-gray-800 dark:text-gray-300">
-                    Your service is expires on the {{ $order->due_date->format('d M Y') }}, {{ $order->due_date->diffForHumans() }}.
+                    Your service is expires on the {{ $order->due_date->translatedFormat('d M Y') }}, {{ $order->due_date->diffForHumans() }}.
 
                     <br><br>
                     Below you can renew your service for another {{ $order->period() }}. After hitting "Renew", we will generate an invoice for you to pay.

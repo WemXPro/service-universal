@@ -51,7 +51,7 @@ Cancel
                         </div>
                     </div>
                 @endif
-                <form action="{{ route('service', ['order' => $order->id, 'page' => 'cancel-service']) }}" method="POST"> 
+                <form action="{{ route('service', ['order' => $order->id, 'page' => 'cancel-service']) }}" method="POST">
                     @csrf
                     <div class="flex mb-4">
                         <div class="flex items-center h-5">
@@ -66,7 +66,7 @@ Cancel
                             <p id="helper-radio-text"
                                 class="text-xs font-normal text-gray-500 dark:text-gray-300">
                                 Your service will be cancelled gracefully at the due
-                                date: {{ $order->due_date->format('d M Y') }}
+                                date: {{ $order->due_date->translatedFormat('d M Y') }}
                             </p>
                         </div>
                     </div>
@@ -100,16 +100,16 @@ Cancel
                                 <select
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 mb-4"
                                 name="gateway" tabindex="-1" aria-hidden="true" required>
-            
+
                                 @foreach (App\Models\Gateways\Gateway::getActive() as $gateway)
-                                    @if($gateway->name == 'Balance') 
+                                    @if($gateway->name == 'Balance')
                                         <option value="{{ $gateway->id }}" @if(Auth::user()->balance >= $order->price['cancellation_fee']) selected @endif>Pay with Balance ({{ currency('symbol') }}{{ number_format(Auth::user()->balance, 2) }})</option>
                                         @continue
                                     @endif
-                                    
+
                                     <option value="{{ $gateway->id }}">{{ $gateway->name }}</option>
                                 @endforeach
-            
+
                                 </select>
                             @endif
                     </div>

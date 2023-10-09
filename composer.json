@@ -1,10 +1,10 @@
 {
-    "name": "wemx/service-universal",
+    "name": "wemx/universal",
     "description": "",
     "authors": [
         {
-            "name": "Mubeen Ullah",
-            "email": "mubeen@wemx.net"
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
         }
     ],
     "extra": {

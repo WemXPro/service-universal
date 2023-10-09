@@ -77,7 +77,7 @@ class UniversalController extends Controller
         $payment = Payment::generate([
             'order_id' => $order->id,
             'user_id' => $order->user_id,
-            'description' => 'Renewal ' . $order->name. ' ['. $order->due_date->format(settings('date_format', 'd M Y')) . ' - '. $order->due_date->addDays($period)->format(settings('date_format', 'd M Y')). ']',
+            'description' => 'Renewal ' . $order->name. ' ['. $order->due_date->translatedFormat(settings('date_format', 'd M Y')) . ' - '. $order->due_date->addDays($period)->translatedFormat(settings('date_format', 'd M Y')). ']',
             'amount' => $price,
             'due_date' => $order->due_date,
             'options' => ['period' => $period],
@@ -97,8 +97,8 @@ class UniversalController extends Controller
             'cancel_reason' => 'max:255',
         ]);
 
-        if($order->status == 'cancelled') {
-            return redirect()->back()->with('error', 'This service was already cancelled');
+        if($order->status !== 'active') {
+            return redirect()->back()->with('error', __('admin.service_already_cancelled'));
         }
 
         if($order->price['cancellation_fee'] > 0)

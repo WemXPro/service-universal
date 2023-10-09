@@ -34,8 +34,6 @@ class Renewal extends ServiceHandler
 
     public function onPaymentExpired(Payment $payment)
     {
-        $order = Order::findOrFail($payment->order_id);
-        $order->status = 'cancelled';
-        $order->save();
+        $payment->order->suspend();
     }
 }

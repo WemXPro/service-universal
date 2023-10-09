@@ -17,7 +17,7 @@
                       Unpaid
                     </a>
                   </li>
-                
+
               </ul>
         </div>
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -52,8 +52,8 @@
                     </td>
                     <td class="px-6 py-4">
                         <div class="pl-3">
-                            <div class="text-base font-semibold text-sm">{{ Auth::user()->created_at->format('d M Y') }}</div>
-                            <div class="font-normal text-gray-500">{{ Auth::user()->created_at->diffForHumans() }}</div>
+                            <div class="text-base font-semibold text-sm">{{ $payment->created_at->translatedFormat('d M Y') }}</div>
+                            <div class="font-normal text-gray-500">{{ $payment->created_at->diffForHumans() }}</div>
                         </div>
                     </td>
                     <td class="px-6 py-4 text-right">

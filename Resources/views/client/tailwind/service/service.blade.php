@@ -23,7 +23,7 @@
                     </div>
                     {{-- <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
                 <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Purchase date</h6>
-                <div class="flex items-center text-gray-500 dark:text-gray-400">{{ $order->created_at->format('d M Y') }}</div>
+                <div class="flex items-center text-gray-500 dark:text-gray-400">{{ $order->created_at->translatedFormat('d M Y') }}</div>
             </div> --}}
                     <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
                         <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Status</h6>
@@ -32,18 +32,18 @@
                     <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
                         <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Due date</h6>
                         <div class="flex items-center text-gray-500 dark:text-gray-400">
-                            {{ $order->due_date->format('d M Y') }}</div>
+                            {{ $order->due_date->translatedFormat('d M Y') }}</div>
                     </div>
                     <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
                         <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Last renewal date
                         </h6>
                         <div class="flex items-center text-gray-500 dark:text-gray-400">
-                            {{ $order->last_renewed_at->format('d M Y') }}</div>
+                            {{ $order->last_renewed_at->translatedFormat('d M Y') }}</div>
                     </div>
                     <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
                         <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Next Invoice</h6>
                         <div class="flex items-center text-gray-500 dark:text-gray-400">
-                            {{ $order->due_date->format('d M Y') }}</div>
+                            {{ $order->due_date->translatedFormat('d M Y') }}</div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-3 mt-4">

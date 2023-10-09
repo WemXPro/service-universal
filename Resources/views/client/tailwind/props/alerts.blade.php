@@ -8,7 +8,7 @@
             <h3 class="text-lg font-medium">This service has been suspended</h3>
         </div>
         <div class="mt-2 mb-4 text-sm">
-            The due date for this service was on the  {{ $order->due_date->format('d M Y') }} ({{ $order->due_date->diffForHumans() }})<br><br>
+            The due date for this service was on the  {{ $order->due_date->translatedFormat('d M Y') }} ({{ $order->due_date->diffForHumans() }})<br><br>
 
             We regret to inform you that your service has been suspended due to overdue payment. To avoid termination, please settle any outstanding invoices within @settings('orders::terminate_suspended_after', 7) days from the due date. If payment is not received within this timeframe, your service will be terminated, resulting in the deletion or revocation of all associated data, files, and licenses.
         </div>
@@ -22,7 +22,7 @@
             </button>
         </div>
     </div>
-    
+
 @endif
 
 @if($order->status == 'cancelled')
@@ -33,7 +33,7 @@
         <h3 class="text-lg font-medium">This service has been cancelled</h3>
         </div>
         <div class="mt-2 mb-4 text-sm">
-            This service is set to be cancelled on {{ $order->cancelled_at->format('d M Y') }} ({{ $order->cancelled_at->diffForHumans() }})<br> <br> If you have changed your mind, you can undo the cancellation before this date. If no action is taken, your service will be suspended and terminated. All files and data belonging to this service will be deleted forever.
+            This service is set to be cancelled on {{ $order->cancelled_at->translatedFormat('d M Y') }} ({{ $order->cancelled_at->diffForHumans() }})<br> <br> If you have changed your mind, you can undo the cancellation before this date. If no action is taken, your service will be suspended and terminated. All files and data belonging to this service will be deleted forever.
         </div>
         <div class="flex">
         <a href="{{ route('service', ['order' => $order->id, 'page' => 'cancel-undo']) }}" class="text-white bg-red-800 hover:bg-red-900 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
