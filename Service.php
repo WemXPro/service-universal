@@ -44,7 +44,7 @@ class Service
                 "name" => "Host",
                 "description" => "The hostname of your Pterodactyl Panel i.e panel.example.com",
                 "type" => "text", // text, textarea, password, number, date, checkbox, url, email, select
-                "rules" => ['required', 'integer'], // laravel validation rules
+                "rules" => ['required'], // laravel validation rules
             ],
             "encrypted::pterodactyl::api_key" => [
                 "name" => "API Key",
