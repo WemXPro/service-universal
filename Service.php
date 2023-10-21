@@ -2,6 +2,7 @@
 
 namespace App\Services\Universal;
 
+use App\Models\Package;
 use App\Models\Order;
 
 class Service
@@ -50,7 +51,7 @@ class Service
      *
      * @return array
      */
-    public static function setPackageConfig(): array
+    public static function setPackageConfig(Package $package): array
     {
         return [];
     }
@@ -63,7 +64,7 @@ class Service
      *
      * @return array
      */
-    public static function setCheckoutConfig(): array
+    public static function setCheckoutConfig(Package $package): array
     {
         return [];    
     }
@@ -73,7 +74,7 @@ class Service
      *
      * @return array
      */
-    public static function setServiceButtons(): array
+    public static function setServiceButtons(Order $order): array
     {
         return [];    
     }
