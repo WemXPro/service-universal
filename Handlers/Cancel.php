@@ -3,8 +3,8 @@
 namespace App\Services\Universal\Handlers;
 
 use App\Facades\ServiceHandler;
-use App\Models\Payment;
 use App\Models\Order;
+use App\Models\Payment;
 
 class Cancel extends ServiceHandler
 {
@@ -15,7 +15,7 @@ class Cancel extends ServiceHandler
     {
         $order = Order::findOrFail($payment->order_id);
         $order->cancel($payment->options['cancelled_at'], $payment->options['cancel_reason']);
-        
+
         return redirect()->back()->with('success', 'Your service was cancelled');
     }
 

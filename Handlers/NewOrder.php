@@ -3,8 +3,8 @@
 namespace App\Services\Universal\Handlers;
 
 use App\Facades\ServiceHandler;
-use App\Models\Payment;
 use App\Models\Order;
+use App\Models\Payment;
 
 class NewOrder extends ServiceHandler
 {
