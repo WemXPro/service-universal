@@ -3,7 +3,7 @@
 namespace App\Services\Universal;
 
 use App\Models\Orders\Order;
-use App\Models\Package;
+use App\Models\Packages\Package;
 
 class Service
 {

@@ -1,17 +1,17 @@
 {
     "name": "Universal",
-    "alias": "universal",
+    "type": "service",
     "description": "Migrated extension",
+    "version": "1.0.0",
+    "author": "WemX",
+    "alias": "universal",
     "keywords": [],
     "priority": 0,
     "providers": [
         "App\\Services\\Universal\\Providers\\UniversalServiceProvider"
     ],
     "files": [],
-    "type": "service",
     "icon": "https://imgur.png",
-    "author": "WemX",
-    "version": "1.0.0",
     "wemx_version": "1.4.0",
     "service": "App\\Services\\Universal\\Service"
 }
