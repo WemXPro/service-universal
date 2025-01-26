@@ -3,7 +3,7 @@
 namespace App\Services\Universal\Handlers;
 
 use App\Facades\ServiceHandler;
-use App\Models\Orders\Order;
+use App\Models\Order;
 use App\Models\Payment;
 
 class Cancel extends ServiceHandler

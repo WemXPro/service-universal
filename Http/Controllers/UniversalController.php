@@ -2,7 +2,7 @@
 
 namespace App\Services\Universal\Http\Controllers;
 
-use App\Models\Orders\Order;
+use App\Models\Order;
 use App\Models\Payment;
 use Carbon\Carbon;
 use Illuminate\Contracts\Support\Renderable;
